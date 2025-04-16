@@ -1,5 +1,6 @@
 <?php
 include_once 'modelo/Conecction.php';
+
 if(!empty($_POST['btnresgistro'])){
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];

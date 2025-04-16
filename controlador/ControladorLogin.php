@@ -13,7 +13,11 @@ if(!empty($_POST['boton'])){
 
     if ($resultado) {
         session_start();
-        $_SESSION['usuario'] = $resultado;
+        $_SESSION['usuario']['id'] = $resultado['id'];
+        $_SESSION['usuario']['nombre'] = $resultado['nombre'];
+        $_SESSION['usuario']['apellido'] = $resultado['apellido'];
+        $_SESSION['usuario']['email'] = $resultado['email'];
+
         header("Location: index.php");
         exit;
     } else {
